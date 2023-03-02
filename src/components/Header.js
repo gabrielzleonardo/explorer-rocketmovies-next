@@ -1,18 +1,12 @@
 import Input from "./Input";
+import Profile from "./Profile";
 
 export default function Header() {
   return (
-    <header className="flex">
-      <h2 className="font-slab text-2xl font-bold text-[#FF859B]">
-        RocketMovies
-      </h2>
-      <Input />
-      <div>
-        <div>
-          <strong>Gabriel Leonardo</strong>
-          <button className="textButton">sair</button>
-        </div>
-      </div>
+    <header className="border-b border-[#3E3B47] flex justify-between items-center  py-6 gap-16 container">
+      <h2 className="text-[#FF859B]">RocketMovies</h2>
+      <Input placeholder="Pesquisar pelo título" />
+      <Profile />
     </header>
   );
 }

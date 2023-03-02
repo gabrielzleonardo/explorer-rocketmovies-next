@@ -9,7 +9,7 @@ const robotoSlab = Roboto_Slab({
 
 export default function App({ Component, pageProps }) {
   return (
-    <div className={robotoSlab.variable}>
+    <div className={`${robotoSlab.variable} h-full`}>
       <Component {...pageProps} />
     </div>
   );

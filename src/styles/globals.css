@@ -2,11 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-color: #1c1b1e;
-}
+@layer components {
+  html,
+  body,
+  #__next {
+    min-height: 100%;
+    height: 100%;
+  }
+  body {
+    background-color: #1c1b1e;
+  }
 
-.textButton {
+  .primaryTextButton,
+  .secondaryTextButton {
+    @apply bg-none border-none text-sm;
+  }
 
-  @apply bg-none border-none text-[#948F99] text-sm
+  .primaryTextButton {
+    @apply text-[#948F99];
+  }
+
+  .secondaryTextButton {
+    @apply text-[#FF859B];
+  }
+
+  .primaryButton {
+    @apply flex items-center gap-2 bg-[#FF859B] text-[#1C1B1E] rounded-md py-3 px-8;
+  }
+
+  h2 {
+    @apply font-slab text-2xl font-bold;
+  }
+
+  .notePreview {
+    background: rgba(255, 133, 155, 0.05);
+    border-radius: 16px;
+  }
 }
