@@ -13,6 +13,11 @@ module.exports = {
       center: true,
       padding: "1rem",
     },
+    extend: {
+      colors: {
+        bubblegum: "#FF859B",
+      },
+    },
     fontFamily: {
       slab: ["var(--font-slab)", "serif"],
     },

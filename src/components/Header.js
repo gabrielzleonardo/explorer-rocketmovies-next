@@ -1,12 +1,17 @@
-import Input from "./Input";
 import Profile from "./Profile";
 
 export default function Header() {
   return (
-    <header className="border-b border-[#3E3B47] flex justify-between items-center  py-6 gap-16 container">
-      <h2 className="text-[#FF859B]">RocketMovies</h2>
-      <Input placeholder="Pesquisar pelo título" />
-      <Profile />
+    <header className="border-b border-[#3E3B47]   mb-10  py-6  ">
+      <div className=" container flex justify-between  items-center gap-16">
+        <h2 className="text-bubblegum">RocketMovies</h2>
+        <input
+          type="text"
+          placeholder="Procure pelo título"
+          className="inputPrimary"
+        />
+        <Profile />
+      </div>
     </header>
   );
 }

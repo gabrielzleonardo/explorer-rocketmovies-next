@@ -23,11 +23,11 @@
   }
 
   .secondaryTextButton {
-    @apply text-[#FF859B];
+    @apply text-bubblegum;
   }
 
   .primaryButton {
-    @apply flex items-center gap-2 bg-[#FF859B] text-[#1C1B1E] rounded-md py-3 px-8;
+    @apply flex items-center gap-2 bg-bubblegum text-[#1C1B1E] rounded-md py-3 px-8;
   }
 
   h2 {
@@ -37,5 +37,54 @@
   .notePreview {
     background: rgba(255, 133, 155, 0.05);
     border-radius: 16px;
+  }
+
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #397524 #dfe9eb;
+  }
+
+  /* Chrome, Edge and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+    width: 10px;
+  }
+  *::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: transparent;
+  }
+
+  *::-webkit-scrollbar-track:hover {
+    background-color: transparent;
+  }
+
+  *::-webkit-scrollbar-track:active {
+    background-color: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #ff859b;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: #ff859b;
+  }
+
+  *::-webkit-scrollbar-thumb:active {
+    background-color: #ff859b;
+  }
+
+  .inputPrimary {
+    @apply w-full bg-[#262529] text-[#c1bbc7] rounded-xl py-4 pl-6  border-0  focus:outline-none placeholder:text-[#948F99];
+  }
+
+  textarea {
+    @apply w-full h-72 resize-none bg-[#262529] text-[#c1bbc7] rounded-xl py-4 pl-6  border-0  focus:outline-none placeholder:text-[#948F99];
+  }
+
+  .addButton {
+    @apply
   }
 }
