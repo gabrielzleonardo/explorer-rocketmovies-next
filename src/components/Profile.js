@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Profile() {
   return (
@@ -7,7 +8,7 @@ export default function Profile() {
         <strong className="whitespace-nowrap text-white text-sm font-bold">
           Gabriel Leonardo
         </strong>
-        <button className="primaryTextButton">sair</button>
+        <Link href="/logIn" className="primaryTextButton">sair</Link>
       </div>
       <div className="w-[64px] h-[64px]">
         <Image

@@ -1,9 +1,8 @@
 import { FiX, FiPlus } from "react-icons/fi";
 
-export default function Tag({ value, onClick, wasCreated }) {
+export default function TagCreation({ value, onClick, wasCreated, inputValue }) {
   return (
     <div
-      wasCreated={wasCreated}
       className={`flex ${
         wasCreated
           ? `bg-[#262529] text-white  font-slab`
@@ -12,12 +11,12 @@ export default function Tag({ value, onClick, wasCreated }) {
     >
       <input
         type="text"
+        onChange={(e) => inputValue(e.target.value)}
         value={value}
         readOnly={wasCreated}
         className="bg-transparent text-[#c1bbc7] rounded-xl py-4 pl-6  border-0  focus:outline-none placeholder:text-[#948F99]"
         placeholder="Novo marcador"
       />
-
 
       <button type="button" onClick={onClick} className="text-bubblegum">
         {wasCreated ? <FiX /> : <FiPlus />}

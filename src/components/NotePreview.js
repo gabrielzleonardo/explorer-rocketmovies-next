@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function NotePreview({ data }) {
   return (
     <Link
-      href={data.hred}
+      href={data.href}
       className=" notePreview flex gap-4 flex-col w-full p-8 hover:brightness-125 ease-in duration-200"
     >
       <div>

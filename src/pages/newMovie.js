@@ -1,5 +1,5 @@
 import Main from "@/components/layouts/Main";
-import Tag from "@/components/Tag";
+import TagCreation from "@/components/TagCreation";
 
 import { useState } from "react";
 
@@ -7,22 +7,22 @@ import Link from "next/link";
 import { FiArrowLeft } from "react-icons/fi";
 
 export default function NewMovie() {
-  const [inputValue, setInputValue] = useState([]);
+  const [inputValue, setInputValue] = useState();
 
   const handleInputValue = (value) => {
-    setInputValue([...inputValue, value]);
-    console.log(inputValue);
+    setInputValue(value);
+    console.log(value);
   };
 
   return (
     <Main>
-      <div className="container flex flex-col gap-6">
+      <div className="container flex flex-col gap-6 overflow-y-auto">
         <button>
           <Link
             className="flex items-center gap-2 secondaryTextButton text-base font-slab"
             href="/"
           >
-            <FiArrowLeft clas />
+            <FiArrowLeft />
             Voltar
           </Link>
         </button>
@@ -37,12 +37,20 @@ export default function NewMovie() {
             />
           </div>
           <textarea placeholder="Observações"></textarea>
-        </div>
-        <div className="flex flex-col gap-4 ">
-          <p>Marcadores</p>
-          <div className="flex justify-start gap-6 p-4 bg-[#0D0C0F] rounded-lg">
-            <Tag value="cleverson" wasCreated />
-            <Tag onClick={(value) => handleInputValue(value)} />
+          <div className="flex flex-col gap-4 ">
+            <p className="text-[#999591] font-slab text-xl">Marcadores</p>
+            <div className="flex justify-start gap-6 p-4 bg-[#0D0C0F] rounded-lg">
+              <TagCreation value="cleverson" wasCreated />
+              <TagCreation inputValue={(value) => handleInputValue(value)} />
+            </div>
+          </div>
+          <div className="flex items-center justify-center gap-10 pb-7">
+            <button className="bg-[#0D0C0F] text-bubblegum rounded-md py-3 px-8 w-full">
+              Excluir filme
+            </button>
+            <button className="primaryButton w-full text-center inline ">
+              Salvar alterações
+            </button>
           </div>
         </div>
       </div>

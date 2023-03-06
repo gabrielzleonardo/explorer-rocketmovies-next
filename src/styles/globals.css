@@ -9,8 +9,13 @@
     min-height: 100%;
     height: 100%;
   }
+  
   body {
     background-color: #1c1b1e;
+  }
+
+  p {
+    @apply text-[#F4EDE8] text-base;
   }
 
   .primaryTextButton,
@@ -85,6 +90,6 @@
   }
 
   .addButton {
-    @apply
+    @apply;
   }
 }
