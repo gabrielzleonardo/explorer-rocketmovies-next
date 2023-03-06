@@ -5,6 +5,7 @@ import { useState } from "react";
 
 import Link from "next/link";
 import { FiArrowLeft } from "react-icons/fi";
+import BackButton from "@/components/BackButton";
 
 export default function NewMovie() {
   const [inputValue, setInputValue] = useState();
@@ -17,15 +18,8 @@ export default function NewMovie() {
   return (
     <Main>
       <div className="container flex flex-col gap-6 overflow-y-auto">
-        <button>
-          <Link
-            className="flex items-center gap-2 secondaryTextButton text-base font-slab"
-            href="/"
-          >
-            <FiArrowLeft />
-            Voltar
-          </Link>
-        </button>
+        <BackButton />
+
         <div className="flex flex-col gap-10">
           <h1 className="text-white font-slab text-3xl">Novo filme</h1>
           <div className="flex gap-10">
@@ -45,7 +39,7 @@ export default function NewMovie() {
             </div>
           </div>
           <div className="flex items-center justify-center gap-10 pb-7">
-            <button className="bg-[#0D0C0F] text-bubblegum rounded-md py-3 px-8 w-full">
+            <button className="bg-[#0D0C0F] text-primary rounded-md py-3 px-8 w-full">
               Excluir filme
             </button>
             <button className="primaryButton w-full text-center inline ">

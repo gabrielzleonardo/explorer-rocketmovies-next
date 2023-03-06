@@ -1,6 +1,11 @@
 import { FiX, FiPlus } from "react-icons/fi";
 
-export default function TagCreation({ value, onClick, wasCreated, inputValue }) {
+export default function TagCreation({
+  value,
+  onClick,
+  wasCreated,
+  inputValue,
+}) {
   return (
     <div
       className={`flex ${
@@ -18,7 +23,7 @@ export default function TagCreation({ value, onClick, wasCreated, inputValue }) 
         placeholder="Novo marcador"
       />
 
-      <button type="button" onClick={onClick} className="text-bubblegum">
+      <button type="button" onClick={onClick} className="text-primary">
         {wasCreated ? <FiX /> : <FiPlus />}
       </button>
     </div>

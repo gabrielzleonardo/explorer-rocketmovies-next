@@ -5,7 +5,7 @@ export default function NotePreview({ data }) {
   return (
     <Link
       href={data.href}
-      className=" notePreview flex gap-4 flex-col w-full p-8 hover:brightness-125 ease-in duration-200"
+      className=" bg-primary/5 rounded-xl flex gap-4 flex-col w-full p-8 hover:brightness-125 ease-in duration-200"
     >
       <div>
         <h2 className="text-white">{data.title}</h2>

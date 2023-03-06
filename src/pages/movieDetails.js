@@ -2,6 +2,7 @@ import Main from "@/components/layouts/Main";
 import Link from "next/link";
 import { FiArrowLeft, FiClock } from "react-icons/fi";
 import Image from "next/image";
+import BackButton from "@/components/BackButton";
 
 export default function MovieDetails({ data }) {
   data = {
@@ -19,22 +20,14 @@ export default function MovieDetails({ data }) {
     <Main>
       <div className="container flex flex-col gap-10 overflow-y-auto">
         <div className="flex flex-col gap-6">
-          <button>
-            <Link
-              className="flex items-center gap-2 secondaryTextButton text-base font-slab"
-              href="/"
-            >
-              <FiArrowLeft />
-              Voltar
-            </Link>
-          </button>
+          <BackButton />
           <div className="flex gap-5">
             <h1 className="font-medium text-3xl font-slab text-[#F4EDE8]">
               {data.title}
             </h1>
             <Image src="stars.svg" width={140} height={20} alt="rating" />
           </div>
-          <div className="flex gap-2 items-center text-bubblegum">
+          <div className="flex gap-2 items-center text-primary">
             <Image
               className="rounded-full border-2 border-[#3E3B47] object-cover h-4"
               src="https://github.com/gabrielzleonardo.png"

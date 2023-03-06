@@ -9,7 +9,7 @@
     min-height: 100%;
     height: 100%;
   }
-  
+
   body {
     background-color: #1c1b1e;
   }
@@ -20,7 +20,7 @@
 
   .primaryTextButton,
   .secondaryTextButton {
-    @apply bg-none border-none text-sm;
+    @apply bg-none border-none text-sm font-slab;
   }
 
   .primaryTextButton {
@@ -28,21 +28,18 @@
   }
 
   .secondaryTextButton {
-    @apply text-bubblegum;
+    @apply text-primary text-base font-slab;
   }
 
   .primaryButton {
-    @apply flex items-center gap-2 bg-bubblegum text-[#1C1B1E] rounded-md py-3 px-8;
+    @apply flex items-center gap-2 bg-primary font-slab text-[#1C1B1E] font-medium rounded-md py-3 px-8;
   }
 
   h2 {
     @apply font-slab text-2xl font-bold;
   }
 
-  .notePreview {
-    background: rgba(255, 133, 155, 0.05);
-    border-radius: 16px;
-  }
+
 
   /* Firefox */
   * {
@@ -87,9 +84,5 @@
 
   textarea {
     @apply w-full h-72 resize-none bg-[#262529] text-[#c1bbc7] rounded-xl py-4 pl-6  border-0  focus:outline-none placeholder:text-[#948F99];
-  }
-
-  .addButton {
-    @apply;
   }
 }

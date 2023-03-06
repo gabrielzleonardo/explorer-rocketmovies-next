@@ -14,8 +14,11 @@ module.exports = {
       padding: "1rem",
     },
     extend: {
+      backgroundImage: {
+        "login": "url('/bg-login.png')",
+      },
       colors: {
-        bubblegum: "#FF859B",
+        primary: "#FF859B",
       },
     },
     fontFamily: {
