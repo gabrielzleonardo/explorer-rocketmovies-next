@@ -6,7 +6,7 @@ export default function signUp() {
     <div className="flex justify-center items-center  h-full">
       <div className="flex flex-col gap-12 px-36">
         <div>
-          <h1 className="font-slab text-primaryont-bold text-5xl">
+          <h1 className="font-slab text-primary font-bold text-5xl">
             RocketMovies
           </h1>
           <p className="font-slab text-[#CAC4CF]   text-sm">
